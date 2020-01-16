@@ -16,5 +16,5 @@ action "verify data" {
 action "run benchmark" {
   needs="verify data"
   uses = "docker://paddlepaddle/paddle:1.6.2"
-  runs = "/bin/bash ./sentiment_analysis/paddle/run_and_time.sh 2"
+  runs = "./sentiment_analysis/paddle/run_and_time.sh 2"
 }
