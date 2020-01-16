@@ -4,6 +4,9 @@
 mkdir -p pytorch/datasets/coco
 pushd pytorch/datasets/coco
 
+apt-get update
+apt-get install -y curl unzip
+
 curl -O https://dl.fbaipublicfiles.com/detectron/coco/coco_annotations_minival.tgz
 tar xzf coco_annotations_minival.tgz
 
