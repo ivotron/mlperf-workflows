@@ -19,6 +19,9 @@ set -e
 export LANG=C.UTF-8
 export LC_ALL=C.UTF-8
 
+apt-get update
+apt-get install -y wget curl python3 git
+
 OUTPUT_DIR=${1:-"data"}
 echo "Writing to ${OUTPUT_DIR}. To change this, set the OUTPUT_DIR environment variable."
 
