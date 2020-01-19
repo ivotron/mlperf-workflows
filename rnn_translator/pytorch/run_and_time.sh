@@ -4,7 +4,10 @@
 # to use the script:
 #   run_and_time.sh
 
-set -e
+set -ex
+
+BASE_DIR=$(pwd)
+cd ${BASE_DIR}/rnn_translator/pytorch
 
 # start timing
 start=$(date +%s)
@@ -12,7 +15,7 @@ start_fmt=$(date +%Y-%m-%d\ %r)
 echo "STARTING TIMING RUN AT $start_fmt"
 
 # run benchmark
-seed=${1:-"1"}
+seed=$SEED
 target=24.00
 
 echo "running benchmark"
