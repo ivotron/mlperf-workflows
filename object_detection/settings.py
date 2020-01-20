@@ -1,6 +1,6 @@
 runtime_configuration = {
     "docker": {
         "runtime": "nvidia",
-        "volumes": ["/tmp:/tmp"]
+        "ipc_mode": "host"
     }
 }

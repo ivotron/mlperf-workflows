@@ -1,6 +1,7 @@
 #!/bin/bash
-
+set -ex
 # Get COCO 2014 data sets
+cd ./object_detection
 mkdir -p pytorch/datasets/coco
 pushd pytorch/datasets/coco
 

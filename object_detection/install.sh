@@ -1,10 +1,6 @@
 #!/bin/bash
-
+set -ex
 # Installs object_detection module
-
-pushd pytorch
-
+cd ./object_detection/pytorch
 rm -Rf build/
 python setup.py clean build develop --user
-
-popd
