@@ -6,6 +6,6 @@ pushd pytorch
 
 # Single GPU training
 time python tools/train_mlperf.py --config-file "configs/e2e_mask_rcnn_R_50_FPN_1x.yaml" \
-       SOLVER.IMS_PER_BATCH 2 TEST.IMS_PER_BATCH 1 SOLVER.MAX_ITER 720000 SOLVER.STEPS "(480000, 640000)" SOLVER.BASE_LR 0.0025 MODEL.WEIGHT /users/noobjc/.torch/models/R-50.pkl
+       SOLVER.IMS_PER_BATCH 2 TEST.IMS_PER_BATCH 1 SOLVER.MAX_ITER 7500 SOLVER.STEPS "(3750, 5000)" SOLVER.BASE_LR 0.02
 
 popd
