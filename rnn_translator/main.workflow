@@ -1,5 +1,5 @@
 workflow "benchmark on rnn_translator" {
-	resolves = "verify data"
+	resolves = "run benchmark"
 }
 
 action "download data" {
