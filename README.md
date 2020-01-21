@@ -46,6 +46,11 @@ pip install popper
 ```
 You can also install it in a virtualenv.
 
+### Object Detection
+```
+cd object_detection/
+popper run --runtime-conf settings.py
+```
 
 ### Sentiment Analysis
 ```
