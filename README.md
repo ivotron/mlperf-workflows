@@ -63,3 +63,9 @@ popper run --runtime-conf settings.py --wfile cuda.workflow
 cd single_stage_detector/
 popper run --runtime-conf settings.py 
 ```
+
+### RNN translator
+```
+cd rnn_translator/
+popper run --runtime-conf settings.py
+```
