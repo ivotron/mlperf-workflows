@@ -6,8 +6,7 @@
 
 set -ex
 
-BASE_DIR=$(pwd)
-cd ${BASE_DIR}/rnn_translator/pytorch
+cd ./rnn_translator/pytorch
 
 # start timing
 start=$(date +%s)
