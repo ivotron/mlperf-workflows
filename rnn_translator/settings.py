@@ -1,5 +1,9 @@
+import os
+
 engine_configuration = {
         "runtime": "nvidia",
         "ipc_mode": "host",
-        "volumes": ["/mnt/hdd/mlperf-benchmarks/rnn_translator/scripts/data:/data"]
+        "volumes": [f"{os.path.join(os.getcwd(), 'scripts/data')}:/data"]
 }
+
+print(engine_configuration)
