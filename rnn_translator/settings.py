@@ -1,8 +1,5 @@
-
-runtime_configuration = {
-    "docker": {
+engine_configuration = {
         "runtime": "nvidia",
         "ipc_mode": "host",
-        "volumes": ["/mnt/hdd/mlperf-benchmarks/rnn_translator/data:/data"]
-    }
+        "volumes": ["/mnt/hdd/mlperf-benchmarks/rnn_translator/scripts/data:/data"]
 }
