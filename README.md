@@ -55,7 +55,7 @@ popper run --runtime-conf settings.py
 ### Sentiment Analysis
 ```
 cd sentiment_analysis/
-popper run --runtime-conf settings.py --wfile cuda.workflow
+popper run --runtime-conf settings.py
 ```
 
 ### Single Stage Detector
