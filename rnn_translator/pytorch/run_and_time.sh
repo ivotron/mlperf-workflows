@@ -14,7 +14,7 @@ start_fmt=$(date +%Y-%m-%d\ %r)
 echo "STARTING TIMING RUN AT $start_fmt"
 
 # run benchmark
-seed=$SEED
+seed=${1:-"1"}
 target=24.00
 
 echo "running benchmark"

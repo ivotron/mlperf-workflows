@@ -16,8 +16,5 @@ action "verify data" {
 action "run benchmark" {
 	needs = "verify data"
 	uses = "./rnn_translator/pytorch"
-	runs = "./rnn_translator/pytorch/run_and_time.sh"
-        env = {
-		SEED = 1
-	}	
+	runs = "./rnn_translator/pytorch/run_and_time.sh 1"
 }
