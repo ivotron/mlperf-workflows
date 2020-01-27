@@ -16,8 +16,7 @@
 
 set -ex
 
-BASE_DIR=$(pwd)
-cd ${BASE_DIR}/single_stage_detector/ssd
+cd ./single_stage_detector/ssd
 
 DGXSYSTEM=${DGXSYSTEM:-"DGX1_32"}
 if [[ -f config_${DGXSYSTEM}.sh ]]; then
@@ -60,7 +59,7 @@ python -m bind_launch --nsockets_per_node ${DGXNSOCKET} \
   --lr "${LR}" \
   --no-save \
   --threshold=0.23 \
-  --data ${DATASET_DIR} \
+  --data /data/coco \
   ${EXTRA_PARAMS[@]} ; ret_code=$?
 
 set +x
