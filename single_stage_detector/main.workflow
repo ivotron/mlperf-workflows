@@ -10,7 +10,7 @@ action "download dataset" {
 action "run benchmark" {
 	needs = "download dataset"
 	uses = "./single_stage_detector/ssd"
-        runs = "./single_stage_detector/ssd/run_and_time.sh"
+        runs = "./single_stage_detector/scripts/run_benchmark.sh"
 	env = {
 		DGXSYSTEM = "DGX1_32"
 	}
