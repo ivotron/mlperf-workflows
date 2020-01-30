@@ -2,8 +2,8 @@
 set -ex
 # Get COCO 2014 data sets
 cd ./object_detection
-mkdir -p pytorch/datasets/coco
-pushd pytorch/datasets/coco
+mkdir -p data/coco
+pushd data/coco
 
 apt-get update
 apt-get install -y curl unzip
