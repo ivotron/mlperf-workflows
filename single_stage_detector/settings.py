@@ -4,7 +4,6 @@ import os
 engine_configuration = {
         "runtime": "nvidia",
         "volumes": [
-		f"{os.path.join(os.getcwd(), 'coco')}:/data/coco",
 		f"{os.path.join(os.getcwd(), 'output/results')}:/results"
 	],
 	"privileged": True,

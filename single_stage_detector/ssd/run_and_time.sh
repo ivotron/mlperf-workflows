@@ -59,7 +59,7 @@ python -m bind_launch --nsockets_per_node ${DGXNSOCKET} \
   --lr "${LR}" \
   --no-save \
   --threshold=0.23 \
-  --data /data/coco \
+  --data ../data/coco \
   ${EXTRA_PARAMS[@]} ; ret_code=$?
 
 set +x
