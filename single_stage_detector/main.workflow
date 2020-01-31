@@ -2,13 +2,13 @@ workflow "benchmark on single stage detector" {
 	resolves = "run benchmark"
 }
 
-action "download dataset" {
+action "download data" {
 	uses = "docker://debian:buster-slim"
 	runs = "./single_stage_detector/scripts/download_dataset.sh"
 }
 
 action "run benchmark" {
-	needs = "download dataset"
+	needs = "download data"
 	uses = "./single_stage_detector/ssd"
         runs = "./single_stage_detector/scripts/run_benchmark.sh"
 	env = {
