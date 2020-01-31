@@ -1,7 +1,10 @@
 #!/bin/bash
 set -ex
 # Get COCO 2014 data sets
+
 cd ./object_detection
+
+rm -rf data/
 mkdir -p data/coco
 pushd data/coco
 
