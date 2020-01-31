@@ -2,7 +2,7 @@
 
 set -ex
 
-cd ./rnn_translator/scripts
+cd ./rnn_translator/
 
 ACTUAL_SRC_TRAIN=`cat data/train.tok.clean.bpe.32000.en |md5sum`
 EXPECTED_SRC_TRAIN='b7482095b787264a310d4933d197a134  -'

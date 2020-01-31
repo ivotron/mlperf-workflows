@@ -1,7 +1,7 @@
 #!/bin/bash
 set -ex
 
-DATASET_DIR='/data'
+DATASET_DIR='../data'
 
 SEED=${1:-"1"}
 TARGET=${2:-"24.00"}

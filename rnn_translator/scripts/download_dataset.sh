@@ -19,7 +19,7 @@ set -ex
 export LANG=C.UTF-8
 export LC_ALL=C.UTF-8
 
-cd ./rnn_translator/scripts
+cd ./rnn_translator/
 rm -rf data/
 
 apt-get update
@@ -144,8 +144,8 @@ cat "${OUTPUT_DIR}/newstest2015.tok.clean.de" \
    > "${OUTPUT_DIR}/newstest_dev.tok.clean.de"
 
 # Filter datasets
-python3 ../pytorch/scripts/filter_dataset.py -f1 ${OUTPUT_DIR}/train.tok.clean.en -f2 ${OUTPUT_DIR}/train.tok.clean.de
-python3 ../pytorch/scripts/filter_dataset.py -f1 ${OUTPUT_DIR}/newstest_dev.tok.clean.en -f2 ${OUTPUT_DIR}/newstest_dev.tok.clean.de
+python3 pytorch/scripts/filter_dataset.py -f1 ${OUTPUT_DIR}/train.tok.clean.en -f2 ${OUTPUT_DIR}/train.tok.clean.de
+python3 pytorch/scripts/filter_dataset.py -f1 ${OUTPUT_DIR}/newstest_dev.tok.clean.en -f2 ${OUTPUT_DIR}/newstest_dev.tok.clean.de
 
 # Generate Subword Units (BPE)
 # Clone Subword NMT
