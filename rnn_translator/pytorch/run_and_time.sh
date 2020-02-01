@@ -32,4 +32,6 @@ echo "ENDING TIMING RUN AT $end_fmt"
 result=$(( $end - $start ))
 result_name="RNN_TRANSLATOR"
 
+rm -rf results/
+
 echo "RESULT,$result_name,$seed,$result,$USER,$start_fmt"
