@@ -63,4 +63,4 @@ output/
     systems/
          system_details.json
 ```
-On running the benchmarks, a directory structure like the above would be generated in the root folder.
+On running the benchmarks, a directory structure like the one above would be generated in the root of the repository.
