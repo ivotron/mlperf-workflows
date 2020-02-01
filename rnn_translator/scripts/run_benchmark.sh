@@ -2,14 +2,14 @@
 set -ex
 
 # Generate the output directory
-mkdir -p ./rnn_translator/output/results/gnmt
-mkdir -p ./rnn_translator/output/systems
+mkdir -p ./output/results/gnmt
+mkdir -p ./output/systems
 
 apt-get update
 apt-get install -y facter
 
 # Save facter output
-facter --json >  ./rnn_translator/output/systems/system_details.json
+facter --json >  ./output/systems/system_details.json
 
 # Run the training 5 times
 counter=1

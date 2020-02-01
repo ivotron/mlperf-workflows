@@ -2,14 +2,14 @@
 set -ex
 
 # Generate the output directory
-mkdir -p ./single_stage_detector/output/results/ssd
-mkdir -p ./single_stage_detector/output/systems
+mkdir -p ./output/results/ssd
+mkdir -p ./output/systems
 
 apt-get update
 apt-get install -y facter
 
 # Save facter output
-facter --json >  ./single_stage_detector/output/systems/system_details.json
+facter --json >  ./output/systems/system_details.json
 
 # Run the training 5 times
 counter=1
