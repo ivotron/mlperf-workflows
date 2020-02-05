@@ -14,7 +14,7 @@ action "verify data" {
 }
 
 action "run benchmark" {
-    needs = "download data"
+    needs = "verify data"
     uses = "./translation/tensorflow"
     runs = "./translation/scripts/run_benchmark.sh"
 }
