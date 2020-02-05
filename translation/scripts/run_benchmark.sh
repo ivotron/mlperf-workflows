@@ -2,7 +2,7 @@
 set -ex
 
 # Generate the output directory
-mkdir -p ./output/results/resnet
+mkdir -p ./output/results/transformer
 mkdir -p ./output/systems
 
 apt-get update
@@ -15,7 +15,7 @@ facter --json >  ./output/systems/system_details.json
 counter=1
 while [ $counter -le 5 ]
 do
-export COMPLIANCE_FILE="/results/resnet/result_${counter}.txt"
+export COMPLIANCE_FILE="/results/transformer/result_${counter}.txt"
 ./translation/tensorflow/run_and_time.sh 1
 ((counter++))
 done
