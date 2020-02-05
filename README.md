@@ -46,6 +46,12 @@ cd rnn_translator/
 popper run --engine-conf settings.py
 ```
 
+### Translation
+```
+cd translation/
+popper run --engine-conf settings.py
+```
+
 ### Benchmark output
 
 ```
@@ -60,6 +66,7 @@ output/
             .
             .
          gnmt/
+         transformer/
     systems/
          system_details.json
 ```
