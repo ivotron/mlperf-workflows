@@ -47,4 +47,6 @@ echo "ENDING TIMING RUN AT ${END_FMT}"
 result=$(( ${END} - ${START} ))
 result_name="transformer"
 
+rm -rf model/
+
 echo "RESULT,${RESULT_NAME},${SEED},${RESULT},${USER},${START_FMT}"
