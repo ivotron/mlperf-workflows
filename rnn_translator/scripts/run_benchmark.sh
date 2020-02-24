@@ -15,7 +15,7 @@ facter --json >  ./results/systems/system_details.json
 counter=1
 while [ $counter -le 5 ]
 do
-export COMPLIANCE_FILE="/gnmt/result_${counter}.txt"
+export COMPLIANCE_FILE="/results/gnmt/result_${counter}.txt"
 ./rnn_translator/pytorch/run_and_time.sh 1
 ((counter++))
 done

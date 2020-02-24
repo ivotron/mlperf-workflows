@@ -15,7 +15,7 @@ facter --json >  ./results/systems/system_details.json
 counter=1
 while [ $counter -le 5 ]
 do
-export COMPLIANCE_FILE="/ssd/result_${counter}.txt"
+export COMPLIANCE_FILE="/results/ssd/result_${counter}.txt"
 ./single_stage_detector/ssd/run_and_time.sh
 ((counter++))
 done
