@@ -7,8 +7,14 @@ action "download data" {
 	runs = "./single_stage_detector/scripts/download_dataset.sh"
 }
 
-action "run benchmark" {
+action "verify data" {
 	needs = "download data"
+	uses = "docker://debian:buster-slim"
+        runs = "./single_stage_detector/scripts/verify_dataset.sh"
+}
+
+action "run benchmark" {
+	needs = "verify data"
 	uses = "./single_stage_detector/ssd"
         runs = "./single_stage_detector/scripts/run_benchmark.sh"
 	env = {
