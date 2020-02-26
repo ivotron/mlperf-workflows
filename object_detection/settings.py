@@ -1,9 +1,9 @@
 import os
 
-engine_configuration = {
+ENGINE = {
         "runtime": "nvidia",
         "ipc_mode": "host",
 	 "volumes": [
-		f"{os.path.join(os.getcwd(), '../output/results')}:/results"
+		f"{os.path.join(os.getcwd(), './results')}:/results"
 	]
 }

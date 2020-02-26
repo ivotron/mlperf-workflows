@@ -1,10 +1,9 @@
 import os
 
-
-engine_configuration = {
+ENGINE = {
         "runtime": "nvidia",
         "volumes": [
-		f"{os.path.join(os.getcwd(), '../output/results')}:/results"
+		f"{os.path.join(os.getcwd(), './results')}:/results"
 	],
 	"privileged": True,
  	"shm_size": "1G"

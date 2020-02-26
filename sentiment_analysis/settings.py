@@ -1,4 +1,4 @@
-runtime_configuration = {
+ENGINE = {
     "docker": {
         "runtime": "nvidia"
     }
