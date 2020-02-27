@@ -3,13 +3,13 @@ workflow "benchmark on single stage detector" {
 }
 
 action "download data" {
-	uses = "docker://debian:buster-slim"
+	uses = "./single_stage_detector/ssd"
 	runs = "./single_stage_detector/scripts/download_dataset.sh"
 }
 
 action "verify data" {
 	needs = "download data"
-	uses = "docker://debian:buster-slim"
+	uses = "./single_stage_detector/ssd"
         runs = "./single_stage_detector/scripts/verify_dataset.sh"
 }
 
