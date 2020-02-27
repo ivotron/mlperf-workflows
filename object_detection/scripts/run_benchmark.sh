@@ -5,9 +5,6 @@ set -ex
 mkdir -p ./results/maskrcnn
 mkdir -p ./results/systems
 
-apt-get update
-apt-get install -y facter
-
 # Save facter output
 facter --json >  ./results/systems/system_details.json
 

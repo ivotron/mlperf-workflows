@@ -3,13 +3,13 @@ workflow "benchmark on object detection" {
 }
 
 action "download data" {
-    uses = "docker://debian:buster-slim"
+    uses = "./object_detection/pytorch"
     runs = "./object_detection/scripts/download_dataset.sh"
 }
 
 action "verify data" {
     needs = "download data"
-    uses = "docker://debian:buster-slim"
+    uses = "./object_detection/pytorch"
     runs = "./object_detection/scripts/verify_dataset.sh"
 }
 
