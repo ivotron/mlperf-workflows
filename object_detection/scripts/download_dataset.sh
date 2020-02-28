@@ -2,8 +2,8 @@
 set -ex
 # Get COCO 2014 data sets
 
-mkdir -p ./object_detection/data/coco
-cd ./object_detection/data/coco
+mkdir -p ./data/coco
+cd ./data/coco
 
 if [ ! -f coco_annotations_minival.tgz ]; then
 curl -O https://dl.fbaipublicfiles.com/detectron/coco/coco_annotations_minival.tgz

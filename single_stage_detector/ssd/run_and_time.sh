@@ -16,7 +16,7 @@
 
 set -ex
 
-cd ./single_stage_detector/ssd
+cd ./ssd
 
 DGXSYSTEM=${DGXSYSTEM:-"DGX1_32"}
 if [[ -f config_${DGXSYSTEM}.sh ]]; then

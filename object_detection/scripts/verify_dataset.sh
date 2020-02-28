@@ -1,7 +1,7 @@
 #!/bin/bash
 set -ex
 
-cd ./object_detection/data/coco
+cd ./data/coco
 
 ACTUAL_TEST=`cat coco_annotations_minival.tgz | md5sum`
 EXPECTED_TEST='2d2b9d2283adb5e3b8d25eec88e65064  -'

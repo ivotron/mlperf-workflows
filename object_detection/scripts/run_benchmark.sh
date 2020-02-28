@@ -13,6 +13,6 @@ counter=1
 while [ $counter -le 5 ]
 do
 export COMPLIANCE_FILE="/results/maskrcnn/result_${counter}.txt"
-./object_detection/pytorch/run_and_time.sh
+./pytorch/run_and_time.sh
 ((counter++))
 done

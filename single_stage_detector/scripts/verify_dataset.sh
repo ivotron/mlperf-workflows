@@ -1,7 +1,7 @@
 #!/bin/bash
 set -ex
 
-cd ./single_stage_detector/data/coco
+cd ./data/coco
 
 ACTUAL_TEST=`cat train2017.zip | md5sum`
 EXPECTED_TEST='cced6f7f71b7629ddf16f17bbcfab6b2  -'

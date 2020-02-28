@@ -3,18 +3,18 @@ workflow "benchmark on object detection" {
 }
 
 action "download data" {
-    uses = "./object_detection/pytorch"
-    runs = "./object_detection/scripts/download_dataset.sh"
+    uses = "./pytorch"
+    runs = "./scripts/download_dataset.sh"
 }
 
 action "verify data" {
     needs = "download data"
-    uses = "./object_detection/pytorch"
-    runs = "./object_detection/scripts/verify_dataset.sh"
+    uses = "./pytorch"
+    runs = "./scripts/verify_dataset.sh"
 }
 
 action "run benchmark" {
     needs = "verify data"
-    uses = "./object_detection/pytorch"
-    runs = "./object_detection/scripts/run_benchmark.sh"
+    uses = "./pytorch"
+    runs = "./scripts/run_benchmark.sh"
 }

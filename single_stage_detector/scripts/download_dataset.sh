@@ -3,8 +3,8 @@ set -ex
 
 # Get COCO 2017 data sets
 
-mkdir -p ./single_stage_detector/data/coco
-cd ./single_stage_detector/data/coco
+mkdir -p ./data/coco
+cd ./data/coco
 
 if [ ! -f train2017.zip ]; then
 curl -O http://images.cocodataset.org/zips/train2017.zip

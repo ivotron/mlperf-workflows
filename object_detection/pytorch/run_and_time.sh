@@ -1,7 +1,7 @@
 #!/bin/bash
 set -ex
 # Runs benchmark and reports time to convergence
-cd ./object_detection/pytorch
+cd ./pytorch
 
 # Install maskrcnn_benchmark
 rm -Rf build/
