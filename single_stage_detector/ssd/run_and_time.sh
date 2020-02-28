@@ -74,8 +74,8 @@ echo "ENDING TIMING RUN AT $end_fmt"
 
 # report result
 result=$(( $end - $start ))
-result_name="OBJECT_DETECTION"
+result_name="ssd"
 
 rm -rf core
 
-echo "RESULT,$result_name,,$result,nvidia,$start_fmt"
+echo "RESULT,$result_name,,$result,$USER,$start_fmt"
