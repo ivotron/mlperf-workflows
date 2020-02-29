@@ -55,7 +55,7 @@ popper run -f main.yml -c settings.py
 ### Benchmark output
 
 ```
-|results/
+results/
 |----- ssd/
 |      |--result_1.txt
 |      |--result_2.txt
