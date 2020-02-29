@@ -6,7 +6,7 @@ WORKDIR /
 
 RUN apt-get update && \
     apt-get install -y python3-tk python-pip && \
-    apt-get install -y numactl facter unzip curl
+    apt-get install -y numactl facter unzip curl bc
 
 RUN pip install --upgrade pip
 RUN pip install -r requirements.txt
