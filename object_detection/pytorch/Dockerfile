@@ -11,7 +11,8 @@ RUN apt-get update -y \
                        libxrender-dev \
 		       curl \
                        unzip \
-                       facter
+                       facter \
+                       bc
 
 RUN pip install ninja==1.8.2.post2 \
                 yacs==0.1.5 \

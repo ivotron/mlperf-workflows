@@ -29,3 +29,4 @@ result_name="maskrcnn"
 
 echo "RESULT,$result_name,,$result,$USER,$start_fmt"
 
+cd ..
