@@ -25,49 +25,47 @@ You can also install it in a [virtualenv](https://packaging.python.org/guides/in
 ### Object Detection
 ```
 cd object_detection/
-popper run --engine-conf settings.py
+popper run -f main.yml -c settings.py
 ```
 
 ### Sentiment Analysis
 ```
 cd sentiment_analysis/
-popper run --engine-conf settings.py
+popper run -f main.yml -c settings.py
 ```
 
 ### Single Stage Detector
 ```
 cd single_stage_detector/
-popper run --engine-conf settings.py 
+popper run -f main.yml -c settings.py
 ```
 
 ### RNN translator
 ```
 cd rnn_translator/
-popper run --engine-conf settings.py
+popper run -f main.yml -c settings.py
 ```
 
 ### Translation
 ```
 cd translation/
-popper run --engine-conf settings.py
+popper run -f main.yml -c settings.py
 ```
 
 ### Benchmark output
 
 ```
-output/
-    results/
-         ssd/
-            result_1.txt
-            .
-            .
-            result_5.txt
-         maskrcnn/
-            .
-            .
-         gnmt/
-         transformer/
-    systems/
-         system_details.json
+|results/
+|----- ssd/
+|      |--result_1.txt
+|      |--result_2.txt
+|      |--result_3.txt
+|      |--result_4.txt
+|      |--result_5.txt
+|----- maskrcnn/
+|----- gnmt/
+|----- transformer/
+|----- systems/
+       |--system_details.json
 ```
 On running the benchmarks, a directory structure like the one above would be generated in the root of the repository.
