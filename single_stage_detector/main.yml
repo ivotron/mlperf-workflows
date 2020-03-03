@@ -4,12 +4,10 @@ steps:
   runs: './scripts/download_dataset.sh'
 
 - id: 'verify data'
-  needs: 'download data'
   uses: './ssd'
   runs: './scripts/verify_dataset.sh'
 
 - id: 'run benchmark'
-  needs: 'verify data'
   uses: './ssd'
   runs: './scripts/run_benchmark.sh'
   env:

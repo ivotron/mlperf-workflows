@@ -4,11 +4,9 @@ steps:
   runs: './scripts/download_dataset.sh'
 
 - id: 'verify data'
-  needs: 'download data'
   uses: './pytorch'
   runs: './scripts/verify_dataset.sh'
 
 - id: 'run benchmark'
-  needs: 'verify data'
   uses: './pytorch'
   runs: './scripts/run_benchmark.sh'
