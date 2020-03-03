@@ -14,7 +14,7 @@ declare -i run_times
 counter=1
 while [ $counter -le 5 ]
 do
-export COMPLIANCE_FILE="/results/maskrcnn/result_${counter}.txt"
+export COMPLIANCE_FILE="/workspace/results/maskrcnn/result_${counter}.txt"
 . ./pytorch/run_and_time.sh
 run_times+=($result)
 ((counter++))
