@@ -1,10 +1,10 @@
 steps:
 - id: 'download data'
-  uses: './pytorch'
+  uses: 'docker://bizongroup/alpine-curl-bash'
   runs: './scripts/download_dataset.sh'
 
 - id: 'verify data'
-  uses: './pytorch'
+  uses: 'docker://bashell/alpine-bash'
   runs: './scripts/verify_dataset.sh'
 
 - id: 'run benchmark'
