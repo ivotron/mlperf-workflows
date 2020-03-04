@@ -4,7 +4,7 @@ steps:
   runs: './scripts/download_dataset.sh'
 
 - id: 'verify data'
-  uses: 'docker://bashell/alpine-bash'
+  uses: 'docker://frolvlad/alpine-bash'
   runs: './scripts/verify_dataset.sh'
 
 - id: 'run benchmark'
