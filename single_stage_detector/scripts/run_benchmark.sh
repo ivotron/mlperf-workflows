@@ -3,10 +3,6 @@ set -ex
 
 # Generate the output directory
 mkdir -p ./results/ssd
-mkdir -p ./results/systems
-
-# Save facter output
-facter --json >  ./results/systems/system_details.json
 
 declare -i run_times
 

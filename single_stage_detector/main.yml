@@ -1,4 +1,8 @@
 steps:
+- id: 'collect system info'
+  uses: 'docker://popperized/facter'
+  runs: './scripts/collect_system_info.sh'
+
 - id: 'download data'
   uses: 'docker://bizongroup/alpine-curl-bash'
   runs: './scripts/download_dataset.sh'
