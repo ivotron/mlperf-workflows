@@ -9,9 +9,6 @@ RUN apt-get update -y \
                        libsm6 \
                        libxext6 \
                        libxrender-dev \
-		       curl \
-                       unzip \
-                       facter \
                        bc
 
 RUN pip install ninja==1.8.2.post2 \
