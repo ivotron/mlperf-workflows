@@ -2,7 +2,7 @@
 set -ex
 
 # Generate the output directory
-mkdir -p ./results/ssd
+mkdir -p ./results/closed/ssd
 
 declare -i run_times
 
@@ -10,7 +10,7 @@ declare -i run_times
 counter=1
 while [ $counter -le 5 ]
 do
-export COMPLIANCE_FILE="/workspace/results/ssd/result_${counter}.txt"
+export COMPLIANCE_FILE="/workspace/results/closed/ssd/result_${counter}.txt"
 . ./ssd/run_and_time.sh
 run_times+=($result)
 ((counter++))
