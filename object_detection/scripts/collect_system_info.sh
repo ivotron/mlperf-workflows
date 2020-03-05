@@ -1,7 +1,7 @@
 #!/bin/bash
 set -ex
 
-mkdir -p ./results/systems
+mkdir -p ./results/closed/systems
 
-facter --json > ./results/systems/system_info.json
+facter --json > ./results/closed/systems/system_info.json
 

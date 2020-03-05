@@ -2,7 +2,7 @@
 set -ex
 
 # Generate the output directory
-mkdir -p ./results/maskrcnn
+mkdir -p ./results/closed/maskrcnn
 
 declare -i run_times
 
@@ -10,7 +10,7 @@ declare -i run_times
 counter=1
 while [ $counter -le 5 ]
 do
-export COMPLIANCE_FILE="/workspace/results/maskrcnn/result_${counter}.txt"
+export COMPLIANCE_FILE="/workspace/results/closed/maskrcnn/result_${counter}.txt"
 . ./pytorch/run_and_time.sh
 run_times+=($result)
 ((counter++))
