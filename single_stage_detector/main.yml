@@ -4,12 +4,16 @@ steps:
   runs: './scripts/collect_system_info.sh'
 
 - id: 'download data'
-  uses: 'docker://bizongroup/alpine-curl-bash'
+  uses: 'docker://byrnedo/alpine-curl'
   runs: './scripts/download_dataset.sh'
 
 - id: 'verify data'
   uses: 'docker://frolvlad/alpine-bash'
   runs: './scripts/verify_dataset.sh'
+
+- id: 'extract data'
+  uses: 'docker://garthk/unzip'
+  runs: './scripts/extract_dataset.sh'
 
 - id: 'run benchmark'
   uses: './ssd'
