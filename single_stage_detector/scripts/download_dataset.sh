@@ -6,17 +6,23 @@ set -ex
 mkdir -p ./data/coco
 cd ./data/coco
 
+if [ ! -d train2017 ]; then
 if [ ! -f train2017.zip ]; then
 curl -O http://images.cocodataset.org/zips/train2017.zip
 fi
 unzip -n train2017.zip
+fi
 
+if [ ! -d val2017 ]; then
 if [ ! -f val2017.zip ]; then
 curl -O http://images.cocodataset.org/zips/val2017.zip
 fi
 unzip -n val2017.zip
+fi
 
+if [ ! -d annotations ]; then
 if [ ! -f annotations_trainval2017.zip ]; then
 curl -O http://images.cocodataset.org/annotations/annotations_trainval2017.zip
 fi
 unzip -n annotations_trainval2017
+fi
