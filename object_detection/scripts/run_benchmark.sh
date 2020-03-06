@@ -1,8 +1,11 @@
 #!/bin/bash
 set -ex
 
+timestamp=$(date "+%Y-%m-%d_%H:%M:%S")
+
 # Generate the output directory
-mkdir -p ./results/closed/maskrcnn
+mkdir -p ./results/closed/$timestamp/maskrcnn
+ln -sfn $timestamp/ ./results/closed/latest
 
 declare -i run_times
 
@@ -10,7 +13,7 @@ declare -i run_times
 counter=1
 while [ $counter -le 5 ]
 do
-export COMPLIANCE_FILE="/workspace/results/closed/maskrcnn/result_${counter}.txt"
+export COMPLIANCE_FILE="/workspace/results/closed/$timestamp/maskrcnn/result_${counter}.txt"
 . ./pytorch/run_and_time.sh
 run_times+=($result)
 ((counter++))
