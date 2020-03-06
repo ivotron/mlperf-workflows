@@ -8,7 +8,8 @@ RUN apt-get update -y \
                        libglib2.0-0 \
                        libsm6 \
                        libxext6 \
-                       libxrender-dev
+                       libxrender-dev \
+                       bc
 
 RUN pip install ninja==1.8.2.post2 \
                 yacs==0.1.5 \

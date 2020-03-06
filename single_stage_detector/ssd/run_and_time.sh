@@ -16,7 +16,7 @@
 
 set -ex
 
-cd ./single_stage_detector/ssd
+cd ./ssd
 
 DGXSYSTEM=${DGXSYSTEM:-"DGX1_32"}
 if [[ -f config_${DGXSYSTEM}.sh ]]; then
@@ -30,19 +30,12 @@ SLURM_NTASKS_PER_NODE=${SLURM_NTASKS_PER_NODE:-$DGXNGPU}
 SLURM_JOB_ID=${SLURM_JOB_ID:-$RANDOM}
 echo "Run vars: id $SLURM_JOB_ID gpus $SLURM_NTASKS_PER_NODE mparams $MULTI_NODE"
 
-# runs benchmark and reports time to convergence
-# to use the script:
-#   run_and_time.sh
-
-set -e
-
 # start timing
 start=$(date +%s)
 start_fmt=$(date +%Y-%m-%d\ %r)
 echo "STARTING TIMING RUN AT $start_fmt"
 
 # run benchmark
-set -x
 NUMEPOCHS=${NUMEPOCHS:-70}
 LR=${LR:-"2.5e-3"}
 
@@ -62,8 +55,6 @@ python -m bind_launch --nsockets_per_node ${DGXNSOCKET} \
   --data ../data/coco \
   ${EXTRA_PARAMS[@]} ; ret_code=$?
 
-set +x
-
 sleep 3
 if [[ $ret_code != 0 ]]; then exit $ret_code; fi
 
@@ -74,8 +65,9 @@ echo "ENDING TIMING RUN AT $end_fmt"
 
 # report result
 result=$(( $end - $start ))
-result_name="OBJECT_DETECTION"
+result_name="ssd"
 
 rm -rf core
 
-echo "RESULT,$result_name,,$result,nvidia,$start_fmt"
+echo "RESULT,$result_name,,$result,$USER,$start_fmt"
+cd ..
