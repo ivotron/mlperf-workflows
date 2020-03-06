@@ -1,6 +1,6 @@
 steps:
 - id: 'collect system info'
-  uses: 'docker://popperized/facter@sha256:9afa1d41c86fc6790f5075e841d831ac242567af0d7d61d90cf639979c1d77e3'
+  uses: 'docker://popperized/facter:3.14.9'
   runs: './scripts/collect_system_info.sh'
 
 - id: 'download data'
@@ -8,7 +8,7 @@ steps:
   runs: './scripts/download_dataset.sh'
 
 - id: 'verify data'
-  uses: 'docker://frolvlad/alpine-bash@sha256:6d66903825fa81381decde07a0353ea520ca75e1f79335670a3d3e69e2f41382'
+  uses: 'docker://alpine:3.9.5'
   runs: './scripts/verify_dataset.sh'
 
 - id: 'extract data'
