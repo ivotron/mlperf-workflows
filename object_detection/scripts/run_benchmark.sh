@@ -1,7 +1,7 @@
 #!/bin/bash
 set -ex
 
-timestamp=$(date "+%Y-%m-%d_%H:%M:%S")
+timestamp=$(date "+%Y%m%d-%H%M%S")
 
 # Generate the output directory
 mkdir -p ./results/closed/$timestamp/maskrcnn
