@@ -7,8 +7,8 @@ WORKDIR /
 ENV DEBIAN_FRONTEND=noninteractive
 
 RUN apt-get update && \
-    apt-get install -y python3-tk && \
-    apt-get install -y numactl bc
+    apt-get install -y --no-install-recommends python3-tk numactl bc && \
+    rm -rf /var/lib/apt/lists/*
 
 RUN pip install --no-cache-dir -r requirements.txt
 
