@@ -12,7 +12,7 @@ RUN apt-get update && \
 
 RUN pip install --no-cache-dir -r requirements.txt
 
-RUN git clone https://github.com/cocodataset/cocoapi.git \
- && cd cocoapi/PythonAPI \
- && git reset --hard ed842bffd41f6ff38707c4f0968d2cfd91088688 \
- && python setup.py build_ext install
+RUN git clone https://github.com/cocodataset/cocoapi.git && \
+    cd cocoapi/PythonAPI && \ 
+    git reset --hard ed842bffd41f6ff38707c4f0968d2cfd91088688 && \
+    python setup.py build_ext install
