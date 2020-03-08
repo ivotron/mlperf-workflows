@@ -20,3 +20,7 @@ steps:
   runs: './scripts/run_benchmark.sh'
   env:
      DGXSYSTEM: 'DGX1_32'
+
+- id: 'report result'
+  uses: 'docker://frolvlad/alpine-bash'
+  runs: './scripts/report_result.sh'
