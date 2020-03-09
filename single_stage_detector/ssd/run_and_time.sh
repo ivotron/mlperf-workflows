@@ -56,7 +56,6 @@ python -m bind_launch --nsockets_per_node ${DGXNSOCKET} \
   ${EXTRA_PARAMS[@]} ; ret_code=$?
 
 sleep 3
-if [[ $ret_code != 0 ]]; then exit $ret_code; fi
 
 # end timing
 end=$(date +%s)

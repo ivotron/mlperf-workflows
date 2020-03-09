@@ -18,3 +18,7 @@ steps:
 - id: 'run benchmark'
   uses: './pytorch'
   runs: './scripts/run_benchmark.sh'
+
+- id: 'report result'
+  uses: 'docker://frolvlad/alpine-bash'
+  runs: './scripts/report_result.sh'

@@ -1,14 +1,18 @@
-
 FROM pytorch/pytorch:1.0.1-cuda10.0-cudnn7-runtime
 
 ADD . /
 
 WORKDIR /
 
-RUN apt-get update && \
-    apt-get install -y python3-tk python-pip && \
-    apt-get install -y numactl bc
+ENV DEBIAN_FRONTEND=noninteractive
 
-RUN pip install --upgrade pip
-RUN pip install -r requirements.txt
-RUN python3 -m pip install pycocotools==2.0.0
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends python3-tk numactl bc && \
+    rm -rf /var/lib/apt/lists/*
+
+RUN pip install --no-cache-dir -r requirements.txt
+
+RUN git clone https://github.com/cocodataset/cocoapi.git && \
+    cd cocoapi/PythonAPI && \ 
+    git reset --hard ed842bffd41f6ff38707c4f0968d2cfd91088688 && \
+    python setup.py build_ext install
