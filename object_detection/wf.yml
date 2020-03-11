@@ -20,5 +20,5 @@ steps:
   runs: './scripts/run_benchmark.sh'
 
 - id: 'report result'
-  uses: 'docker://frolvlad/alpine-bash'
+  uses: 'docker://frolvlad/alpine-bash@sha256:6d66903825fa81381decde07a0353ea520ca75e1f79335670a3d3e69e2f41382'
   runs: './scripts/report_result.sh'
