@@ -5,7 +5,7 @@ set -ex
 mkdir -p ./data/coco
 cd ./data/coco
 
-if [ ! -d coco_annotations_minival ]; then
+if [ ! -d annotations ]; then
 if [ ! -f coco_annotations_minival.tgz ]; then
 curl -O https://dl.fbaipublicfiles.com/detectron/coco/coco_annotations_minival.tgz
 fi

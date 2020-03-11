@@ -3,9 +3,10 @@ set -ex
 
 cd ./data/coco
 
-if [ ! -d coco_annotations_minival ]; then
-if [ -f coco_annotations_minival.tgz ]; then
+if [ ! -d annotations ]; then
+if [ -f coco_annotations_minival.tgz ] && [ -f annotations_trainval2014.zip ]; then
 tar xzf coco_annotations_minival.tgz
+unzip -n annotations_trainval2014.zip
 fi
 fi
 
@@ -21,8 +22,3 @@ unzip -n val2014.zip
 fi
 fi
 
-if [ ! -d annotations ]; then
-if [ -f annotations_trainval2014.zip ]; then
-unzip -n annotations_trainval2014.zip
-fi
-fi
